@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Table</title>
+    <style>
+      table {
+        width: 50%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 7px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="booksTable">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="booksBody">
+        
+      </tbody>
+    </table>
+
+    <script>
+      fetch("books.xml").then(r => r.text()).then(d => {
+        const p = new DOMParser();
+        const x = p.parseFromString(d, "text/xml");
+        const c = document.getElementById("booksBody");
+        x.querySelectorAll("book").forEach(e => c.innerHTML += `<tr>
+                                                                  <td>${e.querySelector("title").textContent} </td>
+                                                                  <td>${e.querySelector("author").textContent}</td>
+                                                                  <td>${e.querySelector("price").textContent} </td>
+                                                                </tr>`);
+      }).catch(e => console.error("Error:", e));
+    
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+    <items>
+        <phName>Galaxy S22</phName>
+        <price>899.99</price>
+    </items>
+    <items>
+        <phName>iPhone 13 Pro</phName>
+        <price>999.99</price>
+    </items>
+    <items>
+        <phName>OnePlus 10 Pro</phName>
+        <price>899.00</price>
+    </items>
+    <items>
+        <phName>Google Pixel 7</phName>
+        <price>799.00</price>
+    </items>
+    <items>
+        <phName>Xiaomi Mi 12</phName>
+        <price>899.00</price>
+    </items>
+</products>
