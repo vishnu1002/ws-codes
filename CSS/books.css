@@ -1,0 +1,11 @@
+books{
+    color: white;
+    background-color: black;
+}
+book{
+    padding: 10px;
+}
+
+title, author{
+    display: block;
+}

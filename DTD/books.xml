@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books SYSTEM "books.dtd">
+<books>
+    <book>
+        <title>Book A</title>
+        <author>Author A</author>
+    </book>
+    <book>
+        <title>Book B</title>
+        <author>Author B</author>
+    </book>
+    <book>
+        <title>Book C</title>
+        <author>Author C</author>
+    </book>
+</books>
