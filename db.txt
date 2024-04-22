@@ -1,0 +1,14 @@
+sudo apt install postgresql postgresql-contrib
+sudo su - postgres
+psql
+\l
+create database vishnudb;
+create role vishnu_role;
+alter database vishnudb owner to vishnu_role;
+alter user vishnu_role with password 'vishnu_pass';
+alter role vishnu_role login createdb password 'vishnu_pass';
+alter role 'vishnu_role' with login;
+
+EC2> Security Groups> launch-wizard-1
+Inbound Rules> Edit
+Add Rule> Type[postgreSQL]
